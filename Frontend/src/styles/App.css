@@ -1,0 +1,207 @@
+/* App Specific Styles */
+@import './variables.css';
+
+/* Header styles */
+.app-header {
+  box-shadow: var(--shadow-md);
+  background-color: white;
+  z-index: var(--z-index-header);
+}
+
+/* Page container */
+.page-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Animation classes */
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.slide-in {
+  animation: slideIn 0.3s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Login/Register form specific styles */
+.auth-form-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: var(--color-gray-50);
+}
+
+.auth-form {
+  width: 100%;
+  max-width: 480px;
+  background-color: white;
+  padding: 2rem;
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-lg);
+}
+
+.auth-logo {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Card hover effects */
+.hover-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hover-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Status badges */
+.status-badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+}
+
+.status-badge.completed {
+  background-color: var(--color-success-100);
+  color: var(--color-success-800);
+}
+
+.status-badge.pending {
+  background-color: var(--color-accent-100);
+  color: var(--color-accent-800);
+}
+
+.status-badge.cancelled {
+  background-color: var(--color-error-100);
+  color: var(--color-error-800);
+}
+
+/* Dashboard stats card */
+.stats-card {
+  padding: 1.5rem;
+  border-radius: var(--radius-card);
+  background-color: white;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  align-items: center;
+}
+
+.stats-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+}
+
+.stats-content {
+  flex: 1;
+}
+
+.stats-title {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-500);
+  margin-bottom: 0.25rem;
+}
+
+.stats-value {
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+  color: var(--color-gray-900);
+}
+
+/* Calendar custom styles */
+.custom-calendar {
+  height: 600px;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--color-gray-200);
+  overflow: hidden;
+}
+
+.rbc-header {
+  padding: 10px 3px;
+  background-color: var(--color-gray-50);
+  font-weight: 600;
+}
+
+.rbc-today {
+  background-color: var(--color-primary-50) !important;
+}
+
+.rbc-event {
+  border-radius: 4px;
+  padding: 3px 5px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-gray-100);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-gray-300);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gray-400);
+}
+
+/* Mobile responsiveness helpers */
+@media (max-width: 768px) {
+  .mobile-hidden {
+    display: none;
+  }
+  
+  .mobile-full-width {
+    width: 100%;
+  }
+  
+  .stats-card {
+    padding: 1rem;
+  }
+  
+  .stats-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .stats-value {
+    font-size: var(--font-size-xl);
+  }
+}
